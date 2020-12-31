@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body>
+
+<h1>단어</h1>
+
+<!--템플릿 태그를 이용해 url표현_about 링크-->
+<a href="{% url 'about' %}">ABOUT</a>
+
+<!--action은 입력 받은 것을 어디에 제출할 것인지를 적는 것-->
+<form action="{% url 'result' %}">
+    <!--여러줄   가로     세로      입력된 값의 이름-->
+    <textarea cols="40" rows="10" name="fulltext"></textarea>
+    <br>
+    <!--제출 버튼-->
+    <input type="submit" value="count">
+</form>
+
+</body>
+</html>

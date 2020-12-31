@@ -1,0 +1,28 @@
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>result</title>
+  </head>
+
+  <body>
+      <h1>당신이 입력한 텍스트는
+          <!--총 단어 수-->{{total}}로 구성되어있습니다</h1>
+
+      <a href="{% url 'home' %}">다시하기</a>
+      <br>
+      <h2>입력한 텍스트: </h2>
+      <!--입력 받을 전체 텍스트-->
+      {{full}}
+
+      <h2>단어 카운트</h2>
+      <!--dictionary의 key값은 word, value값은 howmany-->
+      {% for word, howmany in dictionary%}
+      {{word}}:{{howmany}} <!--단어 : 단어 횟수-->
+      <br>
+      {%endfor%}
+  </body>
+
+  </html>
