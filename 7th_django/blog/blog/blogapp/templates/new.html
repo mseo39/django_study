@@ -49,13 +49,17 @@
             </div>
         </div>
     </nav>
-<br><br>
+    <br><br>
 
-<div class="container">
-<h1>자세한 블로그 내용입니다</h1>
-<br><br>
+    <div class="container">
+        <form action="{% url 'create' %}">
 
-<h1>제목: {{blog.title}}</h1>
-<p>날쩌: {{blog.pub_date}}</p>
-<p>본문: {{blog.body}}</p>
-</div>
+            <h4>제목: </h4>
+            <input type="text" name="title">
+            <br><br>
+            <h4>본문: </h4>
+            <textarea cols="40" rows="10" name="body"></textarea>
+            <br><br>
+            <input class="btn btn-dark" type="submit" value="제출하기">
+        </form>
+    </div>
