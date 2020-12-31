@@ -118,8 +118,6 @@
                     <div class="col">
                         <div class="card shadow-sm">
                             <img src="{% static 'KakaoTalk_20201125_170010395_02.jpg' %}" height="300" alt="img">
-                            
-
 
                             <div class="card-body">
                                 <p class="card-text">This is a wider card with supporting text below as a natural
@@ -134,7 +132,28 @@
                             </div>
                         </div>
                     </div>
+
+
+                    {% for portfolio in portfolio.all %}
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="{{portfolio.image.url}}" height="300" alt="img">
+
+                            <div class="card-body">
+                                <p class="card-text">{{portfolio.description}}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
                 </div>
+
             </div>
         </div>
 
