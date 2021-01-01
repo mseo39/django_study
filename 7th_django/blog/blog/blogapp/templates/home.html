@@ -18,19 +18,25 @@
     <br><br>
     {% endfor %}
 
+    <div class="container">
+
+    <!--만약 이전 페이지가 있다면 코드 실행-->
     {% if posts.has_previous %}
     <a href="?page=1">first</a>
     <a href="?page={{posts.previous_page_number}}">previous</a>
     {% endif %}
 
-    <span>{{posts.number}}</span>
+    <!--3of3-->
+    <span>{{posts.number}}</span><!--현재-->
     <span>of</span>
-    <span>{{posts.paginator.num_pages}}</span>
+    <span>{{posts.paginator.num_pages}}</span><!--전체-->
 
+    <!--만약 다음 페이지가 있다면 코드 실행-->
     {% if posts.has_next %}
     <a href="?page={{posts.next_page_number}}">next</a>
     <a href="?page={{posts.paginator.num_pages}}">last</a>
     {% endif %}
+    </div>
 
 
 {% endblock %}
