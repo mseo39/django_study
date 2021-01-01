@@ -31,6 +31,9 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{% url 'portfolio' %}">portfolio</a></li>
+                            <li><a class="dropdown-item" href="{% url 'signup1' %}">회원가입</a></li>
+                            <li><a class="dropdown-item" href="{% url 'login1' %}">로그인</a></li>
+                            <li><a class="dropdown-item" href="{% url 'logout' %}">로그아웃</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -46,7 +49,7 @@
     </nav>
     <br><br>
     <!--여기에 템플릿 각자의 내용들-->
-    
+
 {% block contents %}
 {% endblock %}
 
