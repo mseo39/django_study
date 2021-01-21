@@ -49,7 +49,7 @@
   <link href="album.css" rel="stylesheet">
   <!--부트스램에 css를 새로 적용할 때는 여기에 적자 위에서부터 차례대로 읽기 때문-->
   <!--css static-->
-  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/detail.css' %}">
 
 
 </head>
@@ -96,65 +96,25 @@
   </header>
 
   <body>
-    <header>
-      <!--static 적용 img src는 경로 alt는 이미지가 뜨지 않을 대체-->
-      <div id="navbar" class="navbar navbar-dark bg-dark shadow-sm">
-        <a id="logo" href="{% url 'home'%}" class="navbar-brand align-self-center">
-          <img src="{% static 'images/dreamary_logo.jpeg'%}" width="35" height="35" alt="드리머리 로고.png">
-          <label class="navbar-brand align-self-center">Dreamary</label>
-        </a>
-      </div>
-    </header>
+    
     <!--main-->
     <main role="main">
 
-      <section class="jumbotron text-center">
-        <div class="container">
-          <h1>드리머리</h1>
-          <p class="lead text-muted">열정 있는 디자이너에게 받는<br>합리적인 헤어 서비스</p>
-          <p>
-            <a href="{% url 'introduce' %}" class="btn btn-outline-danger">드리머리 알아보기</a>
-          </p>
-        </div>
-      </section>
-
-      <div class="album py-5 bg-light">
-        <div class="container">
-
-          <div class="card-columns">
-            <!--받은 queryset을 템플릿 언어를 사용해 html에 사용-->
-            {% for designer in designers %}
-            <div class="card mb-4 shadow-sm">
-              <!--image-->
-              <!--image가 있을 경우-->
-              {% if designer.image %}
-              <img src="{{ designer.image.url }}" class="card-img-top" alt="Designer_Image">
-              {% else %}
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                preserverAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                <title>Dreamary</title>
-                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                  dy=".3em">Dreamary</text>
-              </svg>
-              {% endif %}
-              <!--image가 없을 경우-->
-              <div class="card-body">
-                <h4 class="card-title">{{ designer.name }}</h4>
-                <h6 class="card-text">{{ designer.address}}</h6>
-                <hr>
-                <p class="card-text">{{ designer.description }}</p>
-              </div>
+      <div class="container">
+        <div id="designer" class="row featurette">
+            <div class="col-md-6">
+                <h2 class="featurette-heading">{{ designer.name }}<span id="namedeco" class="text-muted">헤어 디자이너</span></h2>
+                <h5 class="ffeaturette-heading">"{{ designer.address }}" 에서 활동 중입니다.</h5>
+                <p class="lead">{{ designer.description }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    
+                </div>
             </div>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <a href="{% url 'detail' designer.id %}" class="btn btn-sm btn-outline-secondary">자세히
-                  알아보기</a>
-              </div>
+            <div class="col-md-4">
+                <img src="{{ designer.image.url }}" width="150%" alt="Designer_Profile_Image">
             </div>
-            {% endfor %}
-          </div>
         </div>
-      </div>
+    </div>
     </main>
 
     <footer class="text-muted">

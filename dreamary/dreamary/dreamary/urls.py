@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main.views.home, name="home"),
     path('introduce/', main.views.introduce, name="introduce"),
+    path('profile/<int:designer_id>', views.detail, name="detail"),
 ] +static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
