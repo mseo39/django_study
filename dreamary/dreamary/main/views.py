@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from myapp.models  import Deginer #모델의 존재 알려주기
+from main.models  import Deginer #모델의 존재 알려주기
 # Create your views here.
 
 def home(request):
