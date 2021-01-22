@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class Deginer(models.Model): #모델명의 첫글자는 대문자로
+class Designer(models.Model): #모델명의 첫글자는 대문자로
     image = models.ImageField(upload_to= 'images/') #이미지를 다루기 위해 pillow설치
     name = models.CharField(max_length = 50) #최대로 넣을 수 있는 글자 수
     address = models.CharField(max_length = 255)

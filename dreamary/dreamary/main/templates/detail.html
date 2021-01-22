@@ -13,7 +13,10 @@
                 <h5 class="ffeaturette-heading">"{{ designer.address }}" 에서 활동 중입니다.</h5>
                 <p class="lead">{{ designer.description }}</p>
                 <div class="d-flex justify-content-between align-items-center">
-                    
+                    <div class="btn-group">
+                        <a href="{% url 'update' designer.id %}" class="btn btn-sm btn-outline-secondary">정보 수정</a>
+                        <a href="{% url 'delete' designer.id %}" class="btn btn-sm btn-outline-danger">정보 삭제</a>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">

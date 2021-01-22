@@ -2,5 +2,5 @@ from django.contrib import admin
 
 # Register your models here.
 
-from main.models import Deginer
-admin.site.register(Deginer)
+from main.models import Designer
+admin.site.register(Designer)
