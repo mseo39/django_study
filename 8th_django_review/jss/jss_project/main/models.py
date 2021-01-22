@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -7,4 +6,3 @@ class Jasoseol(models.Model): #첫글자는 대문자 models의 Model을 상속�
     title = models.CharField(max_length=50)
     content = models.TextField()
     updated_at = models.DateTimeField(auto_now=True) #날짜와 시간을 받을 수 있음 auto_now 날짜와 시간을 자동으로 저장 해줌
-    author = models.ForeignKey(User, on_delete=models.CASCADE) #on_delete=models.CASCADE_작성자가 탈퇴하면 작성자가 작성한 오브젝트가 삭제됨 

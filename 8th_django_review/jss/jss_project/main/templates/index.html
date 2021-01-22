@@ -1,6 +1,6 @@
 {%load static%}
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="ko">
 
 <head>
     <meta charset="UFT-8">
@@ -11,22 +11,34 @@
 
 <body>
 
-<div class="make_jss">
-    <a href="{% url 'create' %}">
-        <div class="plus_btn">
-            +
-        </div>
-    </a>
-    <p>자기소개서 작성</p>
-</div>
+    <div class="make_jss">
+        <a href="{% url 'create' %}">
+            <div class="plus_btn">
+                +
+            </div>
+        </a>
+        <p>자기소개서 작성</p>
+    </div>
 
-<div class="all_jss">
-    <p>자기소개서 제목</p>
+    <div class="all_jss">
+        <p>자기소개서 제목</p>
 
-    <p>자기소개서 내용</p>
+        <p>자기소개서 내용</p>
 
-    <p>날짜</p>
-</div>
+        <p>날짜</p>
+    </div>
+
+    {% for jss in all_jss %}
+    <!--detail로 jss.id(pk)값을 보내줌-->
+    <div class="all_jss">
+
+        <p>{{jss.title}}</p>
+
+        <p>{{jss.content}}</p>
+
+        <p>{{jss.updated_at|date:"Y-m-d"}}</p>
+    </div>
+    {% endfor %}
 
 </body>
 
