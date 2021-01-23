@@ -29,15 +29,20 @@
     </div>
 
     {% for jss in all_jss %}
-    <!--detail로 jss.id(pk)값을 보내줌-->
-    <div class="all_jss">
+    <a href="{% url 'detail' jss.id %}">
+        <!--detail로 jss.id(pk)값을 보내줌-->
+        <!--detail로 jss.id(pk)값을 보내줌-->
+        <div class="all_jss">
 
-        <p>{{jss.title}}</p>
+            <p>{{jss.author}}</p>
 
-        <p>{{jss.content}}</p>
+            <p>{{jss.title}}</p>
 
-        <p>{{jss.updated_at|date:"Y-m-d"}}</p>
-    </div>
+            <p>{{jss.content}}</p>
+
+            <p>{{jss.updated_at|date:"Y-m-d"}}</p>
+        </div>
+    </a>
     {% endfor %}
 
 </body>
