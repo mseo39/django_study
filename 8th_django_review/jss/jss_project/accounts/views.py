@@ -13,3 +13,6 @@ def signup(request):
             return redirect('index')
 
     return render(request, 'signup.html', {'regi_form':regi_form})
+
+class MyLoginView(LoginView):
+    template_name='login.html'

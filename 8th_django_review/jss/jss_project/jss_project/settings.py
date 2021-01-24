@@ -123,3 +123,7 @@ import os
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static') #stasic 파일을 모을 디렉터리
+
+LOGIN_REDIRECT_URL ='/'
+
+LOGOUT_REDIRECT_URL ='/'
