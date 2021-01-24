@@ -11,6 +11,16 @@
 
 <body>
 
+    {% if user.is_authenticated %} 
+
+    <a href="{% url 'logout' %}">
+        <button>로그아웃</button>
+    </a>
+   
+    안녕하세요 {{user}}님 
+
+    {% else %}
+
     <a href="{% url 'signup' %}">
         <button>회원가입</button>
     </a>
@@ -19,11 +29,7 @@
         <button>로그인</button>
     </a>
 
-    <a href="{% url 'logout' %}">
-        <button>로그아웃</button>
-    </a>
-
-    {{user}}
+    {% endif %}
 
     <div class="make_jss">
         <a href="{% url 'create' %}">
