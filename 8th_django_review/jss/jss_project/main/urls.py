@@ -8,4 +8,5 @@ urlpatterns = [
     path('create', main.views.create, name="create"),
     path('delete/<int:jss_id>',main.views.delete, name="delete"),
     path('update/<int:jss_id>',main.views.update, name="update"),
+     path('my_index', main.views.my_index, name="my_index"),
 ]
