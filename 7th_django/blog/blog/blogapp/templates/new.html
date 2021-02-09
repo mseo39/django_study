@@ -15,4 +15,14 @@
         </form>
     </div>
 
+    <div class="container">
+        <form method='POST' action="{% url 'create' %}">
+            <table>
+                {{form.as_table}}
+            </table>
+            <br>
+            <input class="btn btn-dark" type="submit" value="제출하기">
+        </form>
+    </div>
+
     {% endblock %}
