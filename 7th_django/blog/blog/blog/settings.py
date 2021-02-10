@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites', #소셜로그인
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -40,6 +41,14 @@ INSTALLED_APPS = [
     'blogapp.apps.BlogappConfig',
     'portfolio.apps.PortfolioConfig',
     'accounts.apps.AccountsConfig',
+
+    #allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    #privider
+    'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +144,13 @@ STATIC_ROOT= os.path.join(BASE_DIR,'static')
 MEDIA_ROOT= os.path.join(BASE_DIR,'media')
 
 MEDIA_URL = '/media/'
+
+AUTHENTICATION_BACKENDS = (
+
+    'django.contrib.auth.backends.ModelBackend'
+
+    'allauth.account.auth_backends.AuthenticationBackend'
+)
+
+SITE_ID=1
+LOGIN_REDIRECT_URL='/'

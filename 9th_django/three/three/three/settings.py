@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites', #소셜로그인
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
