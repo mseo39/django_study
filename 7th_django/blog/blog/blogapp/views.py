@@ -52,3 +52,8 @@ def blogpost(request):
     else :
         form = BlogPost()
         return render(request, 'new1.html', {'form':form})
+
+
+def index(request):
+   
+    return render(request, 'index.html')
