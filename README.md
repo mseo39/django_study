@@ -5,5 +5,5 @@
 ## 8th django
 ## 9th django
 1. social login
-2. api
+2. map_api [velog](https://velog.io/@mseo39/Django-%E3%85%A1map-API)
 3.
