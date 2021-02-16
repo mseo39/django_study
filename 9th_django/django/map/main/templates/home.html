@@ -27,6 +27,16 @@
     로그인 해야 함
 
     {% endif %}
+    <br><br>
+
+    {% for blog in blog.all %}
+    <img src="{{blog.image.url}}" width="500">
+    <br>
+    {{blog.text}}
+    <br><br>
+    <img src="{{blog.image_thumbnail.url}}">
+    {% endfor %}
+
     <div id="map" style="width:50%;height:400px;"></div>
 
     <script>
