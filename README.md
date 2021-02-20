@@ -9,4 +9,5 @@
 3. [썸네일](https://github.com/mseo39/django_study/commit/60156e7d7e27c3b3c4952c5d945e3a0bc840f473) [velog](https://velog.io/@mseo39/Django-thumbnail)
   ->[수정](https://github.com/mseo39/django_study/commit/3d27fb326f52b1ebc26101f17e8491777aed7a73)
 5. [app 재사용](#) [velog](https://velog.io/@mseo39/Django-app-%EC%9E%AC%EC%82%AC%EC%9A%A9)
-6. postgreSQL괴의 연동
+6. [postgreSQL괴의 연동](#) [velog](#)
+7. aws배포
