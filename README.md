@@ -2,6 +2,14 @@
 멋쟁이사자처럼 django study
 
 ## 7th django
+1. wordcount
+2. model, admin
+3. pk, path convert
+4. static
+5. login, signup
+6. pagination
+7. faker
+8. form
 ## 8th django
 ## 9th django
 1. [social_login](https://velog.io/@mseo39/Django-social-login)  
