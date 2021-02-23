@@ -11,6 +11,8 @@
 7. faker
 8. form
 ## 8th django
+1. jss
+2. dreamary
 ## 9th django
 1. [social_login](https://velog.io/@mseo39/Django-social-login)  
 2. [map_api](https://github.com/mseo39/django_study/commit/a0b887147f36ed4bec53cc3af0285a959d126e0d) [velog](https://velog.io/@mseo39/Django-%E3%85%A1map-API)  
